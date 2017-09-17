@@ -32,7 +32,7 @@ evaluated.
 ```
   JSON Body:
   {
-      "base64Data": "<base64EncodedBynaryData"
+      "base64Data": "<base64EncodedBynaryData>"
   }
    ```
 
@@ -50,7 +50,7 @@ evaluated.
 ```
   JSON Body:
   {
-      "base64Data": "<base64EncodedBynaryData"
+      "base64Data": "<base64EncodedBynaryData>"
   }
 ```
 
@@ -69,14 +69,14 @@ from that point that differs between both endpoints.
   JSON Returned Body:
   {
       "jobId": "<jobId>",
-      "Message": "<message informing the status of the comparison",
+      "Message": "<message informing the status of the comparison>",
       "Diff":[{
-        "offset":"<offset position wheere diff was found",
-        "length":"length of the diff-ed sequence found"
+        "offset":"<offset position wheere diff was found>",
+        "length":"<length of the diff-ed sequence found>"
       },
       {
-              "offset":"<offset position wheere diff was found",
-              "length":"length of the diff-ed sequence found"
+              "offset":"<offset position wheere diff was found>",
+              "length":"<length of the diff-ed sequence found>"
       }]
   }
 ```
