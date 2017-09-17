@@ -157,7 +157,7 @@ In order to improve this REST API, the following functionalities were implemente
     The URL to use this functionality is
         
      ```
-          GET /v1/diff/<jobid>/?cachedResult=true
+          GET /v1/diff/<jobid>/?cachedDiff=true
      ```
      
 - Clean jobid cache from Redis
