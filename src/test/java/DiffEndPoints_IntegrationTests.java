@@ -29,8 +29,6 @@ import com.sun.jersey.test.framework.JerseyTest;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-import wiremock.org.apache.commons.collections4.MultiValuedMap;
-import wiremock.org.apache.commons.collections4.multimap.HashSetValuedHashMap;
 
 import javax.ws.rs.client.Entity;
 import javax.ws.rs.core.Context;
