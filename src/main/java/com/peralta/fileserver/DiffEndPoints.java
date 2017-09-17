@@ -216,7 +216,7 @@ public class DiffEndPoints {
                 response = diffResponse.toString();
             }
 
-            return Response.status(201).entity(response).build();
+            return Response.status(200).entity(response).build();
 
         } catch (InterruptedException e) {
             String msg = "Server is unavailable. Please try again later";
@@ -242,7 +242,7 @@ public class DiffEndPoints {
             DiffResponse diffResponse = new DiffResponse();
             diffResponse.setJobId(jobId);
             diffResponse.setMessage("All keys were removed successfully");
-            return Response.status(201).entity(diffResponse.toString()).build();
+            return Response.status(200).entity(diffResponse.toString()).build();
 
         } catch (InterruptedException e) {
             String msg = "Server is unavailable. Please try again later";
@@ -250,8 +250,5 @@ public class DiffEndPoints {
             return Response.status(500).entity(msg).build();
         }
     }
-
-
-
 
 }

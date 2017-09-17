@@ -62,6 +62,77 @@
             <version>3.0</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/com.sun.jersey/jersey-test-framework -->
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-test-framework</artifactId>
+            <version>1.19.4</version>
+            <type>pom</type>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sun.jersey.jersey-test-framework</groupId>
+            <artifactId>jersey-test-framework-core</artifactId>
+            <version>1.19</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.jersey.jersey-test-framework</groupId>
+            <artifactId>jersey-test-framework-external</artifactId>
+            <version>1.19</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-bundle</artifactId>
+            <version>1.19</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-client</artifactId>
+            <version>1.19</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.jersey.jersey-test-framework</groupId>
+            <artifactId>jersey-test-framework-http</artifactId>
+            <version>1.19</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.jersey.jersey-test-framework</groupId>
+            <artifactId>jersey-test-framework-grizzly2</artifactId>
+            <version>1.19</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-server</artifactId>
+            <version>1.17.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-grizzly2</artifactId>
+            <version>1.19</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-core</artifactId>
+            <version>1.19</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-servlet</artifactId>
+            <version>1.17.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.jersey.test.framework</groupId>
+            <artifactId>jersey-test-framework</artifactId>
+            <version>1.0.3.1</version>
+
+        </dependency>
+
+
     </dependencies>
 
     <properties>

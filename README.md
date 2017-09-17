@@ -32,9 +32,21 @@ evaluated.
 ```
   JSON Body:
   {
-      "base64Data": "<base64EncodedBynaryData>"
+      "base64Data": "<base64EncodedBynaryData"
   }
    ```
+
+Expected response code: 201
+
+```
+  JSON Returned Body:
+  {
+      "jobId": "<jobId>",
+      "Message": "<message informing that job was received",
+      "Diff":[]
+  }
+```
+
 
 ### Upload content to RIGHT endpoint
 
@@ -45,12 +57,23 @@ This call behaves the same as the previous request, but is used to send data to 
 Where \<jobid> is any string used to identify the job
  
 This call requests a JSON body, containing one attribute `base64Data` holding a base64 encoded binary data that must be 
-evaluated.  
- 
+evaluated.
+  
 ```
   JSON Body:
   {
-      "base64Data": "<base64EncodedBynaryData>"
+      "base64Data": "<base64EncodedBynaryData"
+  }
+```
+
+Expected response code: 201
+
+```
+  JSON Returned Body:
+  {
+      "jobId": "<jobId>",
+      "Message": "<message informing that job was received",
+      "Diff":[]
   }
 ```
 
@@ -63,20 +86,22 @@ This call is used to start the Diff comparison between the data provided on the 
 Where \<jobid> is any string used to identify the job
  
 Returned body is a JSON informing the offset positions where diffs were found, as well as the length of the sequence 
-from that point that differs between both endpoints.  
+from that point that differs between both endpoints. 
+ 
+Expected response code: 200
  
 ```
   JSON Returned Body:
   {
       "jobId": "<jobId>",
-      "Message": "<message informing the status of the comparison>",
+      "Message": "<message informing the status of the comparison",
       "Diff":[{
-        "offset":"<offset position wheere diff was found>",
-        "length":"<length of the diff-ed sequence found>"
+        "offset":"<offset position wheere diff was found",
+        "length":"length of the diff-ed sequence found"
       },
       {
-              "offset":"<offset position wheere diff was found>",
-              "length":"<length of the diff-ed sequence found>"
+              "offset":"<offset position wheere diff was found",
+              "length":"length of the diff-ed sequence found"
       }]
   }
 ```
@@ -146,3 +171,21 @@ In order to improve this REST API, the following functionalities were implemente
           DELETE /v1/diff/<jobid>
      ```
 
+## Tests
+
+All tests (unit and integration) are under /test/java folder. Unit Tests were implemented using Mockito Framework and 
+Integration Tests were implemented using JerseyTest Framework.
+ 
+### Unit Test Coverture
+
+Current Unit Tests coverture is presented above
+ 
+Class | # TestCases | % methods covered | % lines covered
+--- | --- | --- | ---
+DiffServer | 13 | 100% | 93%
+DiffWorker | 2 | 100% | 98%
+RedisClient | 4 | 100% | 100%
+ 
+### Integration Tests
+
+Current implementation of Integration tests has 17 test cases
