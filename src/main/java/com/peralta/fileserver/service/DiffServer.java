@@ -43,8 +43,8 @@ public class DiffServer {
     public DiffServer() throws InterruptedException{
 
         try {
-            //redisClient = new RedisClient();
-            redisClient = new RedisClient("redis-17197.c8.us-east-1-2.ec2.cloud.redislabs.com", 17197);
+            redisClient = new RedisClient();
+            //redisClient = new RedisClient("redis-17197.c8.us-east-1-2.ec2.cloud.redislabs.com", 17197);
             diffWorker = new DiffWorker();
         } catch (JedisConnectionException e) {
             String msg = "Error when connecting to Redis server";
