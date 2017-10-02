@@ -174,18 +174,31 @@ In order to improve this REST API, the following functionalities were implemente
 ## Tests
 
 All tests (unit and integration) are under /test/java folder. Unit Tests were implemented using Mockito Framework and 
-Integration Tests were implemented using JerseyTest Framework.
+Integration Tests were implemented using JerseyTest 2 Framework.
  
-### Unit Test Coverture
+## Running Code with IntelliJ
 
-Current Unit Tests coverture is presented above
+Requirements:
+- IntelliJ IDEA (tested on version 2017.1.5)
+- A localhost Redis Server installed. Otherwise comment the following line on DiffServer.java `redisClient = new RedisClient();` 
+ and uncomment line `redisClient = new RedisClient("redis-17197.c8.us-east-1-2.ec2.cloud.redislabs.com", 17197);`
+- Maven 
  
-Class | # TestCases | % methods covered | % lines covered
---- | --- | --- | ---
-DiffServer | 13 | 100% | 93%
-DiffWorker | 2 | 100% | 98%
-RedisClient | 4 | 100% | 100%
- 
-### Integration Tests
+Starting App: 
+  
+1. Clone code using `git clone https://github.com/karineperalta/api-diffcomparison.git`
+2. Using a prompt, open the folder where code was cloned and run `mvn clean install`
+3. Open the project using IntelliJ. Do not import anything automatically
+4. Right-click on the project name > Open Module Settings
+5. On the Facets menu, click on '+' button and select Web. When a dialog appears, select fileServer
+6. A message informing that 'Web Facet resources are not included on the Artifact' will be presented. 
+Click on the 'Create Artifact' button
+7. On the right-side of the screen, on the Available Elements panel, select all libraries under fileserver item. 
+Click with the right button on the selected list and select option 'Put into /WEB-INF/lib'
+8. Select the project name and click on the Run menu. Choose 'Edit Configurations' item
+9. Click on the '+' button and select 'Tomcat Server' > 'Local'
+10. Open the Deployment Tab > click on the '+' button > Artifact. The fileserver artifact will be automatically selected.
+11. Click on the OK button
+12. Click on the Run button (the button with a green arrow)
+13. Perform requests to http://localhost:<port>/v1/diff... according to your needs :)  
 
-Current implementation of Integration tests has 17 test cases
